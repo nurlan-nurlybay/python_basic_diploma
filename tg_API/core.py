@@ -143,10 +143,3 @@ class Bot:
         self.bot.add_custom_filter(custom_filters.StateFilter(self.bot))
         self.bot.add_custom_filter(custom_filters.IsDigitFilter())
         self.bot.infinity_polling(skip_pending=True)
-
-
-'''
-for some reason in cb_low_handler and cb_high_handler 
-self.bot.set_state(call.from_user.id, MyStates.high_selected, call.message.chat.id)
-this line of code has no effect. The states are never set.
-'''
