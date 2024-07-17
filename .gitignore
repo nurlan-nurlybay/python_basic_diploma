@@ -1,0 +1,6 @@
+*.log
+
+.venv/
+.gitignore
+.env
+default.db

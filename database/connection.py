@@ -12,6 +12,11 @@ db = PooledSqliteDatabase(database_path, max_connections=5)
 
 
 def connect_to_database():
+    """
+    Establishes a connection to the SQLite database using the PooledSqliteDatabase class.
+
+    :return: None
+    """
     try:
         db.connect()
     except Exception as e:
@@ -20,6 +25,11 @@ def connect_to_database():
 
 
 def check_database_health() -> bool:
+    """
+    Checks the health of the database connection by performing a simple SQL query.
+
+    :return: True if the connection is healthy, False otherwise.
+    """
     try:
         db.connect()
         db.execute_sql('SELECT 1;')  # Simple query to check connectivity
