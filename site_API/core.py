@@ -96,3 +96,4 @@ class SiteApi:
         response = requests.get(self.url, headers=self.headers, params=self.params)
 
         return response.json()
+    

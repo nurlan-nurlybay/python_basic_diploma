@@ -20,6 +20,7 @@ To run this bot, you need Python 3.7+ and some packages from the Python package 
 
 2. **Install dependencies:**
    ```bash
+   python3 -m venv .venv
    pip install -r requirements.txt
    
 3. **Install dependencies:**
