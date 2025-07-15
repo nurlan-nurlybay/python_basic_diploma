@@ -5,7 +5,7 @@ The Movie Series Finder Bot is a Telegram bot designed to help users discover th
 ## Features
 
 - Search for top-rated movies and series.
-- Search for low-rated movies and series.
+- Search for low-rated movies and series.a
 - Custom search by specifying a rating range.
 - View the history of the last 5 requests made.
 

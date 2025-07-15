@@ -1,6 +1,6 @@
 from config import AppSettings
-from database.common.models import History
-from database.core import db_manage
+# from database.common.models import History
+# from database.core import db_manage
 from log_config import logger
 from tg_API.core import Bot
 from site_API.core import SiteApi

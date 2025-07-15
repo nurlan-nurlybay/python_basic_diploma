@@ -2,12 +2,12 @@
 
 from pydantic import SecretStr, StrictStr
 from pydantic_settings import BaseSettings
-# from dotenv import find_dotenv, load_dotenv
+from dotenv import find_dotenv, load_dotenv
 
-# if not find_dotenv():  # searches for .env
-#     exit("Переменные окружения не загружены, так как отсутствует файл .env")
-# else:
-#     load_dotenv()  # reads it and defines the environmental variables atp
+if not find_dotenv():  # searches for .env
+    exit("Переменные окружения не загружены, так как отсутствует файл .env")
+else:
+    load_dotenv()  # reads it and defines the environmental variables atp
 
 
 class AppSettings(BaseSettings):

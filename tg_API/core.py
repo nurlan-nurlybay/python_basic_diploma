@@ -348,11 +348,11 @@ class Bot:
             titles = ''
             if "results" in response_json:
                 for i, title in enumerate(response_json["results"]):
-                    description = html.unescape(f"{i + 1}. {title["title"]}\n\n"
-                                                f"{title["synopsis"]}\n\n"
-                                                f"imdbrating: {title["imdbrating"]}")
+                    description = html.unescape(f"{i + 1}. {title['title']}\n\n"
+                                                f"{title['synopsis']}\n\n"
+                                                f"imdbrating: {title['imdbrating']}")
                     self.bot.send_photo(call.message.chat.id, photo=title["img"], caption=description)
-                    titles += f"{title["title"]}\n"
+                    titles += f"{title['title']}\n"
             else:
                 self.bot.send_message(call.message.chat.id, text="no results")
 
@@ -405,18 +405,18 @@ class Bot:
             """
             response_json = self.site.get_custom(call.data)
             choice = 'MOVIES' if self.site.params["type"] == 'movie' else 'SERIES'
-            req = f"CUSTOM [{self.site.params.get("start_rating")}-{call.data}] {self.site.params["limit"]} {choice}"
+            req = f"CUSTOM [{self.site.params.get('start_rating')}-{call.data}] {self.site.params['limit']} {choice}"
 
             self.bot.delete_message(call.message.chat.id, call.message.message_id)
             self.bot.send_message(call.message.chat.id, text=req)
             titles = ''
             if "results" in response_json:
                 for i, title in enumerate(response_json["results"]):
-                    description = html.unescape(f"{i + 1}. {title["title"]}\n\n"
-                                                f"{title["synopsis"]}\n\n"
-                                                f"imdbrating: {title["imdbrating"]}")
+                    description = html.unescape(f"{i + 1}. {title['title']}\n\n"
+                                                f"{title['synopsis']}\n\n"
+                                                f"imdbrating: {title['imdbrating']}")
                     self.bot.send_photo(call.message.chat.id, photo=title["img"], caption=description)
-                    titles += f"{title["title"]}\n"
+                    titles += f"{title['title']}\n"
             else:
                 self.bot.send_message(call.message.chat.id, text="no results")
             self.bot.delete_state(call.from_user.id, call.message.chat.id)
